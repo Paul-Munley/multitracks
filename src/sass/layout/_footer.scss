@@ -1,0 +1,97 @@
+.footer {
+  // background-color: cornflowerblue;
+  background-color: #282828;
+  clear: both;
+  padding: 4rem 14rem;
+  color: $color-gray-dark-1;
+
+  &__primary {
+    &-content {
+      display: flex;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+
+    &:not(:last-child) {
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  &__item {
+    // Navigation Headers
+    &:first-child {
+      color: $color-gray-light;
+      font-size: 2rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+
+    &-social-cir-icon {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 1.6rem;
+      }
+    }
+  }
+
+  &__col {
+    // background-color: crimson;
+    margin-right: 1.2rem;
+    width: 20%;
+
+    &-large {
+      // background-color: lawngreen;
+      width: 40%;
+
+      &-resources {
+        margin-bottom: 2.8rem;
+      }
+    }
+  }
+
+  &__support {
+    margin-top: 3.2rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-gray-dark-1;
+  }
+
+  &__socials {
+    padding-top: 2.6rem;
+  }
+
+  &__socials--square {
+    // clear: both;
+    // display: table;
+    height: 3.8rem;
+  }
+}
+
+.twitter-like {
+  height: 15px;
+  width: 30px;
+}
+
+// Unsure why this wasn't working while nested in &__item selector
+.footer__item-subscribe-btn {
+  display: inline-block;
+  transform: translate(-0.4rem, 0.2rem);
+}
+
+.footer__item-subscribe-input {
+  width: 25.8rem;
+  height: 5rem;
+  border: 1px solid $color-gray-dark-1;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: $color-gray-dark-1;
+  }
+}

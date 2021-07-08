@@ -1,0 +1,63 @@
+.summary {
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  &__content {
+    margin: 8rem 7.5rem;
+  }
+
+  &__block {
+    padding-bottom: 3.2rem;
+    margin-bottom: 3.2rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid black;
+    }
+  }
+
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+
+    &-promo {
+      margin-top: 2.4rem;
+    }
+  }
+
+  &__label {
+    width: fit-content;
+  }
+
+  &__number {
+    // display: inline-block;
+    float: right;
+    color: $color-gray-dark-1;
+  }
+
+  &__block-payment-info {
+    margin-top: 0.8rem;
+  }
+
+  &__card-number {
+    color: $color-gray-dark-1;
+  }
+
+  &__change-payment-method {
+    float: right;
+  }
+
+  &__all-sales-final {
+    color: $color-gray-dark-1;
+    margin-bottom: 4.8rem;
+  }
+
+  &__place-order-and-agreement {
+    text-align: center;
+  }
+
+  &__agreement-text {
+    color: $color-gray-dark-1;
+    margin-top: 3.2rem;
+  }
+}

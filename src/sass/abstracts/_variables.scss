@@ -1,4 +1,4 @@
-// Colors
+// COLORS
 $color-gray-dark-1: #919191; // primary lettering
 $color-gray-dark-2: #828282; // secondary lettering
 $color-black: #000; // tertiary lettering
@@ -6,8 +6,11 @@ $color-white: #ffff; // header and cart background
 $color-gray-light: #fafafa; // order summary background
 $color-blue-light: #43b1e6; // buttons
 
-// Grid
+// GRID
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-vertical-small: 6rem;
 $gutter-horizontal: 6rem;
+
+// BORDER
+$border-bottom-grey: 1px solid #dadada;
