@@ -24,6 +24,11 @@
     padding-left: 2rem;
     margin-bottom: 6.4rem;
     margin-right: 3.15rem;
+
+    @media only screen and (max-width: 700px) {
+      padding-left: 0;
+      margin-right: 0;
+    }
   }
 
   &__item {
@@ -33,17 +38,45 @@
     padding-bottom: 3.2rem;
     border-bottom: $border-bottom-grey;
     align-items: center;
-    // justify-content: space-between;
     list-style-type: none;
 
     &:not(:first-child) {
       padding-top: 1.6rem;
+    }
+
+    @media only screen and (max-width: 700px) {
+      display: block;
+      @include clearfix;
+      padding: 0;
+      height: 12.8rem;
+
+      // Height of first list item to balance out with padding of other list items
+      &:first-child {
+        height: 11.2rem;
+      }
+
+      div {
+        width: auto;
+      }
+
+      // Selecting all of the other list items media type to compensate for the padding that are on all list items after the first
+      &:not(:first-child) .saved__media-type {
+        position: absolute;
+        float: left;
+        font-size: 1.4rem;
+        top: 8.4rem;
+      }
     }
   }
 
   &__img-description {
     width: 40%;
     margin: 0 auto;
+
+    @media only screen and (max-width: 700px) {
+      float: left;
+      font-size: 1.4rem;
+    }
   }
 
   &__img {
@@ -58,6 +91,10 @@
     display: inline-block;
     vertical-align: middle;
     padding-left: 1.6rem;
+
+    // @media only screen and (max-width: 700px) {
+    //   width: 15.5rem;
+    // }
   }
 
   &__artist {
@@ -67,13 +104,25 @@
 
   &__media-type {
     width: 25%;
+    height: fit-content;
     text-align: start;
+
+    @media only screen and (max-width: 700px) {
+      position: absolute;
+      float: left;
+      font-size: 1.4rem;
+      bottom: 2rem;
+    }
   }
 
   &__icon-type {
     width: fit-content;
     display: inline-block;
     vertical-align: middle;
+
+    @media only screen and (max-width: 700px) {
+      width: 2rem;
+    }
   }
 
   &__text-type {
@@ -84,13 +133,23 @@
 
   &__edit-options-box {
     width: 35%;
-    margin: 0 auto;
+    margin: 0;
     text-align: end;
+
+    @media only screen and (max-width: 700px) {
+      position: absolute;
+      right: 0;
+      bottom: 1.5rem;
+    }
   }
 
   &__remove-item-btn {
     color: $color-gray-dark-2;
     margin-right: 2rem;
+
+    @media only screen and (max-width: 700px) {
+      display: none !important;
+    }
   }
 
   &__verbar {
