@@ -4,6 +4,12 @@
 
   &__content {
     margin: 8rem 7.5rem;
+
+    @include respond(tab-land) {
+      margin-top: 6rem;
+      margin-bottom: 4rem;
+      padding: 0 15rem;
+    }
   }
 
   &__block {

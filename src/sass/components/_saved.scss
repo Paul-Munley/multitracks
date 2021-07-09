@@ -7,6 +7,10 @@
     background-color: white;
     margin: 0 3rem 8rem 4.5rem;
     height: 100%;
+
+    @include respond(tab-land) {
+      margin-top: 4rem;
+    }
   }
 
   &__heading {
@@ -29,12 +33,17 @@
     padding-bottom: 3.2rem;
     border-bottom: $border-bottom-grey;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
     list-style-type: none;
 
     &:not(:first-child) {
       padding-top: 1.6rem;
     }
+  }
+
+  &__img-description {
+    width: 40%;
+    margin: 0 auto;
   }
 
   &__img {
@@ -57,7 +66,8 @@
   }
 
   &__media-type {
-    text-align: center;
+    width: 25%;
+    text-align: start;
   }
 
   &__icon-type {
@@ -70,6 +80,12 @@
     color: $color-gray-dark-1;
     width: fit-content;
     display: inline-block;
+  }
+
+  &__edit-options-box {
+    width: 35%;
+    margin: 0 auto;
+    text-align: end;
   }
 
   &__remove-item-btn {

@@ -4,29 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- FONTS AND ICONS -->
+    <title>Cart | Multitracks</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    /> -->
     <link
       href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet"
     />
-
     <link
       rel="icon"
       href="https://mtracks.azureedge.net/public/images/icon/favicon/favicon-svg2.svg"
     />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <title>Cart | Multitracks</title>
+    <!-- JS -->
+    <script defer src="src/js/views/headerView.js"></script>
+    <script defer src="src/js/views/cartView.js"></script>
   </head>
   <body>
     <div id="fb-root"></div>
@@ -424,9 +424,9 @@
               <p class="footer__item footer__item-support-text">
                 Have a Problem?
               </p>
-              <a href="#" classh="footer__link footer__link-support"
-                >View FAQs or Contact our Support Team<span
-                  ><img src="src/img/right-arrow.svg" /></span
+              <a href="#" class="footer__link footer__link-support"
+                ><span>View FAQs or Contact our Support Team</span
+                ><span><img src="src/img/right-arrow.svg" /></span
               ></a>
             </div>
             <div class="footer__socials">
@@ -470,16 +470,65 @@
                   data-size="small"
                   data-share="false"
                 ></div>
-                <a href="#" class="twitter-like">
-                  <img src="src/img/twitter-square.svg" />
-                </a>
+                <a
+                  href="https://twitter.com/MultiTracks_?ref_src=twsrc%5Etfw"
+                  class="twitter-follow-button"
+                  data-show-screen-name="false"
+                  data-show-count="false"
+                  >Follow @MultiTracks_</a
+                >
+                <script
+                  async
+                  src="https://platform.twitter.com/widgets.js"
+                  charset="utf-8"
+                ></script>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="footer__secondary">
-        <div class="footer__secondary-content"></div>
+        <div class="footer__secondary-content">
+          <div class="footer__copyright footer__copyright-secondary">
+            <p>&copy;2006-2021 by Multitracks.com LLC. All Rights Reserved</p>
+          </div>
+          <ul class="footer__list footer__list-secondary">
+            <li class="footer__item footer__item-secondary">
+              <a href="#" class="footer__link footer__link-secondary">Terms</a>
+            </li>
+            <li class="footer__item footer__item-secondary">
+              <a href="#" class="footer__link footer__link-secondary"
+                >Privacy Policy</a
+              >
+            </li>
+            <li class="footer__item footer__item-secondary">
+              <a href="#" class="footer__link footer__link-secondary"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="footer__lang-selection">
+            <span
+              class="
+                material-icons-outlined
+                footer__lang-selection footer__lang-selection-globe
+              "
+            >
+              language
+            </span>
+            <span class="footer__lang-selection footer__lang-selection-text"
+              ><p>English</p></span
+            >
+            <span
+              class="
+                material-icons
+                footer__lang-selection footer__lang-selection-text
+              "
+            >
+              arrow_drop_down
+            </span>
+          </div>
+        </div>
       </div>
     </footer>
   </body>

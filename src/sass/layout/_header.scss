@@ -10,7 +10,17 @@
   border-bottom: $border-bottom-grey;
   padding: 2rem;
 
-  // @include breakpoint around 1200px
+  @include respond(tab-land) {
+    justify-content: space-between;
+  }
+
+  &__mobile-icons {
+    & span {
+      &:not(:last-child) {
+        margin-right: 3.3rem;
+      }
+    }
+  }
 
   &__logo {
     transform: translateY(-0.2rem);
