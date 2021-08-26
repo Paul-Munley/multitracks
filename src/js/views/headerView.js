@@ -23,11 +23,11 @@ const originalHeader = document.querySelector("header").innerHTML;
 
 // Do this when screen width < 1200px
 const headerMQHandler = () => {
-  if (tabletLandscapeWidth.matches) {
-    header.innerHTML = mobileHeader;
-  } else {
-    header.innerHTML = originalHeader;
-  }
+	if (tabletLandscapeWidth.matches) {
+		header.innerHTML = mobileHeader;
+	} else {
+		header.innerHTML = originalHeader;
+	}
 };
 
 // Calling function at runtime

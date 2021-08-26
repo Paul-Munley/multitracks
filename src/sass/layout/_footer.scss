@@ -1,212 +1,234 @@
 .footer {
-  background-color: #282828;
-  clear: both;
-  color: $color-gray-dark-1;
-  margin-bottom: 8rem;
+	background-color: #282828;
+	clear: both;
+	color: $color-gray-dark-1;
+	overflow: hidden;
 
-  &__primary {
-    padding: 4rem 8rem;
+	&__primary {
+		padding: 4rem 8rem;
 
-    &-content {
-      display: flex;
-      position: relative;
-      flex-wrap: wrap-reverse;
-      justify-content: space-between;
-    }
-  }
+		&-content {
+			display: flex;
+			position: relative;
+			flex-wrap: wrap-reverse;
+			justify-content: space-between;
+		}
 
-  &__secondary {
-    width: 100%;
-    background-color: #171717;
-    padding: 1.8rem 4rem 1.1rem 4rem;
+		@include respond(phone) {
+			padding: 4rem 1rem;
+		}
+	}
 
-    &-content {
-      font-size: 1.4rem;
-      display: flex;
-      margin: 0;
-      align-items: center;
-      justify-content: space-between;
+	&__secondary {
+		width: 100%;
+		background-color: #171717;
+		padding: 1.8rem 4rem 1.1rem 4rem;
 
-      @include respond(phone) {
-        display: block;
-        text-align: center;
-      }
-    }
-  }
+		&-content {
+			font-size: 1.4rem;
+			display: flex;
+			margin: 0;
+			align-items: center;
+			justify-content: space-between;
 
-  &__list {
-    list-style-type: none;
+			@include respond(phone) {
+				display: block;
+				text-align: center;
+			}
+		}
+	}
 
-    &:not(:last-child) {
-      margin-bottom: 2.8rem;
-    }
+	&__list {
+		list-style-type: none;
 
-    &-social-cir-icon-list {
-      display: inline-block;
-      width: fit-content;
-      padding-right: 3rem;
-    }
+		&:not(:last-child) {
+			margin-bottom: 2.8rem;
+		}
 
-    &-secondary {
-      font-size: 1.4rem;
-      margin-bottom: 0 !important;
-    }
-  }
+		&.footer__list-social-cir-icon-list {
+			display: inline-block;
+			width: fit-content;
+			padding-right: 3rem;
+			margin-bottom: 0;
+		}
 
-  &__item {
-    // Navigation Headers
-    &:first-child {
-      color: $color-gray-light;
-      font-size: 2rem;
-    }
+		&-secondary {
+			font-size: 1.4rem;
+			margin-bottom: 0 !important;
+		}
+	}
 
-    &:not(:last-child) {
-      margin-bottom: 0.8rem;
-    }
+	&__item {
+		// Navigation Headers
+		&:first-child {
+			color: $color-gray-light;
+			font-size: 2rem;
 
-    &-social-cir-icon {
-      display: inline-block;
+			@include respond(phone-small) {
+				font-size: 1.7rem;
+			}
+		}
 
-      &:not(:last-child) {
-        margin-right: 1.6rem;
-      }
-    }
+		&:not(:last-child) {
+			margin-bottom: 0.8rem;
+		}
 
-    &-secondary {
-      display: inline-block;
-      margin-bottom: 0 !important;
-    }
-  }
+		&-social-cir-icon {
+			display: inline-block;
 
-  &__col {
-    width: 15%;
+			&:not(:last-child) {
+				margin-right: 1.6rem;
+			}
+		}
 
-    @include respond(tab-land) {
-      margin-top: 30rem;
-    }
+		&-secondary {
+			display: inline-block;
+			margin-bottom: 0 !important;
+		}
+	}
 
-    &-large {
-      width: 35%;
+	&__col {
+		width: 15%;
 
-      @include respond(tab-land) {
-        width: fit-content;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+		@include respond(tab-land) {
+			margin-top: 30rem;
+		}
 
-      @include respond(phone) {
-        width: 100%;
-      }
+		&-large {
+			width: 35%;
+			overflow: hidden;
 
-      &-resources {
-        margin-bottom: 2.8rem;
-      }
-    }
-  }
+			@include respond(tab-land) {
+				width: fit-content;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
 
-  &__support {
-    margin-top: 3.2rem;
-  }
+			@include respond(phone) {
+				width: 100%;
+			}
 
-  &__link {
-    text-decoration: none;
-    color: $color-gray-dark-1;
+			&-resources {
+				margin-bottom: 2.8rem;
+			}
+		}
+	}
 
-    &-support span {
-      &:not(:last-child) {
-        margin-right: 1.1rem;
-      }
-    }
+	&__support {
+		margin-top: 3.2rem;
+	}
 
-    &-secondary {
-      font-size: 1.4rem;
-    }
-  }
+	&__link {
+		text-decoration: none;
+		color: $color-gray-dark-1;
 
-  &__socials {
-    padding-top: 2.6rem;
+		&-support span {
+			&:not(:last-child) {
+				margin-right: 1.1rem;
+			}
+		}
 
-    @include respond(phone) {
-      text-align: center;
-    }
-  }
+		&-secondary {
+			font-size: 1.4rem;
+		}
+	}
 
-  &__socials--square {
-    height: 3.8rem;
-    width: fit-content;
-    display: inline-block;
+	&__socials {
+		padding-top: 2.6rem;
+		width: fit-content;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
 
-    & div {
-      margin-right: 0.5rem;
-    }
-  }
+		@include respond(phone) {
+			text-align: center;
+		}
+	}
 
-  &__lang-selection {
-    color: $color-gray-dark-1;
-    vertical-align: middle;
+	&__socials--square {
+		height: 3.8rem;
+		width: fit-content;
+		display: flex;
 
-    & span {
-      display: inline-block;
-    }
-  }
+		& div {
+			margin-right: 0.5rem;
+		}
+	}
+
+	&__lang-selection {
+		color: $color-gray-dark-1;
+		vertical-align: middle;
+
+		& span {
+			display: inline-block;
+		}
+	}
+}
+
+// Facebook Icon
+.fb-like {
+}
+
+// Twitter Icon
+.twitter-follow-button-rendered {
 }
 
 // Sticky footer
 .sticky-footer {
-  background-color: white;
-  width: 100%;
-  height: 8rem;
-  position: fixed;
-  bottom: 0;
-  z-index: 10;
+	background-color: white;
+	width: 100%;
+	height: 8rem;
+	position: fixed;
+	bottom: 0;
+	z-index: 10;
 
-  @media only screen and (min-width: 900px) {
-    display: none;
-  }
+	@media only screen and (min-width: 900px) {
+		display: none;
+	}
 }
 
 .sticky-footer-content {
-  margin: 1.6rem;
+	margin: 1.6rem;
 }
 
 .sticky-footer-total-credits {
-  font-size: 1.4rem;
-  font-weight: 700;
-  float: left;
-  margin-left: 1.8rem;
+	font-size: 1.4rem;
+	font-weight: 700;
+	float: left;
+	margin-left: 1.8rem;
 }
 
 .sticky-footer-btn {
-  float: right;
+	float: right;
 
-  a {
-    padding: 1.6rem 3rem;
-  }
+	a {
+		padding: 1.6rem 3rem;
+	}
 }
 
 // Unsure why this wasn't working while nested in &__item selector
 .footer__item-subscribe-btn {
-  display: inline-block;
-  transform: translate(-5rem, 0.2rem);
+	display: inline-block;
+	transform: translate(-5rem, 0.2rem);
 
-  @include respond(tab-land) {
-    transform: translate(-5rem, 0.1rem);
-  }
+	@include respond(tab-land) {
+		transform: translate(-5rem, 0.1rem);
+	}
 
-  @include respond(tab-port) {
-    transform: translate(-5rem, 0);
-  }
+	@include respond(tab-port) {
+		transform: translate(-5rem, 0);
+	}
 }
 
 .footer__item-subscribe-input {
-  width: 65%;
-  height: 5rem;
-  border: 1px solid $color-gray-dark-1;
-  border-radius: 3px;
+	width: 65%;
+	height: 5rem;
+	border: 1px solid $color-gray-dark-1;
+	border-radius: 3px;
 
-  &::placeholder {
-    color: $color-gray-dark-1;
-  }
+	&::placeholder {
+		color: $color-gray-dark-1;
+	}
 }

@@ -17,6 +17,9 @@ html {
 
 body {
   box-sizing: border-box; }
+  @media only screen and (max-width: 900px) {
+    body {
+      padding-bottom: 8rem; } }
 
 body {
   font-family: "lato", sans-serif;
@@ -361,7 +364,7 @@ body {
   background-color: #282828;
   clear: both;
   color: #919191;
-  margin-bottom: 8rem; }
+  overflow: hidden; }
   .footer__primary {
     padding: 4rem 8rem; }
     .footer__primary-content {
@@ -369,6 +372,9 @@ body {
       position: relative;
       flex-wrap: wrap-reverse;
       justify-content: space-between; }
+    @media only screen and (max-width: 600px) {
+      .footer__primary {
+        padding: 4rem 1rem; } }
   .footer__secondary {
     width: 100%;
     background-color: #171717;
@@ -387,16 +393,20 @@ body {
     list-style-type: none; }
     .footer__list:not(:last-child) {
       margin-bottom: 2.8rem; }
-    .footer__list-social-cir-icon-list {
+    .footer__list.footer__list-social-cir-icon-list {
       display: inline-block;
       width: fit-content;
-      padding-right: 3rem; }
+      padding-right: 3rem;
+      margin-bottom: 0; }
     .footer__list-secondary {
       font-size: 1.4rem;
       margin-bottom: 0 !important; }
   .footer__item:first-child {
     color: #fafafa;
     font-size: 2rem; }
+    @media only screen and (max-width: 375px) {
+      .footer__item:first-child {
+        font-size: 1.7rem; } }
   .footer__item:not(:last-child) {
     margin-bottom: 0.8rem; }
   .footer__item-social-cir-icon {
@@ -412,7 +422,8 @@ body {
       .footer__col {
         margin-top: 30rem; } }
     .footer__col-large {
-      width: 35%; }
+      width: 35%;
+      overflow: hidden; }
       @media only screen and (max-width: 1200px) {
         .footer__col-large {
           width: fit-content;
@@ -435,14 +446,18 @@ body {
     .footer__link-secondary {
       font-size: 1.4rem; }
   .footer__socials {
-    padding-top: 2.6rem; }
+    padding-top: 2.6rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; }
     @media only screen and (max-width: 600px) {
       .footer__socials {
         text-align: center; } }
   .footer__socials--square {
     height: 3.8rem;
     width: fit-content;
-    display: inline-block; }
+    display: flex; }
     .footer__socials--square div {
       margin-right: 0.5rem; }
   .footer__lang-selection {
