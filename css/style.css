@@ -71,8 +71,9 @@ body {
   color: #ffff;
   border-radius: 3px; }
 
-.btn--blue-no-bg {
-  color: #43b1e6; }
+.btn.btn--blue-no-bg {
+  color: #43b1e6;
+  text-decoration: underline; }
 
 .cart {
   font-size: 1.6rem;
@@ -310,27 +311,26 @@ body {
 
 .summary {
   font-size: 1.6rem;
-  font-weight: 700; }
-  .summary__content {
-    margin: 8rem 7.5rem; }
-    @media only screen and (max-width: 1200px) {
-      .summary__content {
-        margin-top: 6rem;
-        margin-bottom: 4rem;
-        padding: 0 15rem; } }
-    @media only screen and (max-width: 900px) {
-      .summary__content {
-        margin-top: 6rem;
-        margin-bottom: 4rem;
-        padding: 0 6rem; } }
-    @media only screen and (max-width: 600px) {
-      .summary__content {
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-        padding: 0 2.4rem 0 1.6rem; } }
-    @media only screen and (max-width: 375px) {
-      .summary__content {
-        padding: 0 0.8rem 0 0; } }
+  font-weight: 700;
+  padding: 8rem 7.5rem; }
+  @media only screen and (max-width: 1200px) {
+    .summary__content {
+      margin-top: 6rem;
+      margin-bottom: 4rem;
+      padding: 0 15rem; } }
+  @media only screen and (max-width: 900px) {
+    .summary__content {
+      margin-top: 6rem;
+      margin-bottom: 4rem;
+      padding: 0 6rem; } }
+  @media only screen and (max-width: 600px) {
+    .summary__content {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      padding: 0 2.4rem 0 1.6rem; } }
+  @media only screen and (max-width: 375px) {
+    .summary__content {
+      padding: 0 0.8rem 0 0; } }
   .summary__block {
     padding-bottom: 3.2rem;
     margin-bottom: 3.2rem; }
@@ -472,7 +472,8 @@ body {
   height: 8rem;
   position: fixed;
   bottom: 0;
-  z-index: 10; }
+  z-index: 10;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05); }
   @media only screen and (min-width: 900px) {
     .sticky-footer {
       display: none; } }
@@ -597,7 +598,10 @@ $gutter-horizontal = 6rem;
       color: #919191; }
 
 .container {
-  position: relative; }
+  clear: both;
+  content: "";
+  display: table;
+  height: 100%; }
 
 .cart {
   width: 67%;
@@ -608,7 +612,7 @@ $gutter-horizontal = 6rem;
 
 .summary {
   width: 33%;
-  height: 100vh;
+  height: 100%;
   float: right;
   background-color: #e5e5e5; }
   @media only screen and (max-width: 1200px) {

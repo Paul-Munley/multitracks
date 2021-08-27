@@ -1,33 +1,36 @@
 .container {
-  position: relative;
+	clear: both;
+	content: "";
+	display: table;
+	height: 100%;
 }
 
 .cart {
-  width: 67%;
-  float: left;
+	width: 67%;
+	float: left;
 
-  @include respond(tab-land) {
-    width: 100%;
-  }
+	@include respond(tab-land) {
+		width: 100%;
+	}
 }
 
 .summary {
-  width: 33%;
-  height: 100vh;
-  float: right;
-  background-color: #e5e5e5;
+	width: 33%;
+	height: 100%;
+	float: right;
+	background-color: #e5e5e5;
 
-  @include respond(tab-land) {
-    width: 100%;
-    height: auto;
-  }
+	@include respond(tab-land) {
+		width: 100%;
+		height: auto;
+	}
 }
 
 .saved {
-  width: 67%;
-  float: left;
+	width: 67%;
+	float: left;
 
-  @include respond(tab-land) {
-    width: 100%;
-  }
+	@include respond(tab-land) {
+		width: 100%;
+	}
 }

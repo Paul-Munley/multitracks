@@ -1,9 +1,10 @@
 .summary {
 	font-size: 1.6rem;
 	font-weight: 700;
+	padding: 8rem 7.5rem;
 
 	&__content {
-		margin: 8rem 7.5rem;
+		// margin: 8rem 7.5rem;
 
 		@include respond(tab-land) {
 			margin-top: 6rem;
