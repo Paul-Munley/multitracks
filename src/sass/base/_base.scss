@@ -8,6 +8,7 @@
 
 html {
 	font-size: 62.5%;
+	height: 100%;
 
 	@include respond(tab-land) {
 		font-size: 56.25%; // Base font 9px
@@ -20,8 +21,17 @@ html {
 
 body {
 	box-sizing: border-box;
+	height: 100%;
 
 	@include respond(tab-port) {
 		padding-bottom: 8rem;
+	}
+}
+
+main {
+	height: 100%;
+
+	@include respond(large-deskop) {
+		margin: 0 10% 0 10%;
 	}
 }
