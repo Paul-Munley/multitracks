@@ -24,10 +24,14 @@ body {
       padding-bottom: 8rem; } }
 
 main {
+  overflow: hidden;
   height: 100%; }
   @media only screen and (min-width: 1988px) {
     main {
       margin: 0 10% 0 10%; } }
+  @media only screen and (max-width: 1200px) {
+    main {
+      height: auto; } }
 
 body {
   font-family: "lato", sans-serif;
@@ -88,7 +92,7 @@ body {
   font-weight: 700; }
   @media only screen and (min-width: 1988px) {
     .cart {
-      margin-top: 10%; } }
+      margin-top: 8%; } }
   .cart__content {
     position: relative;
     background-color: white;

@@ -29,9 +29,14 @@ body {
 }
 
 main {
+	overflow: hidden;
 	height: 100%;
 
 	@include respond(large-deskop) {
 		margin: 0 10% 0 10%;
+	}
+
+	@include respond(tab-land) {
+		height: auto;
 	}
 }
