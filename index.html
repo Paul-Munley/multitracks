@@ -1,544 +1,567 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<!-- METADATA -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- FONTS AND ICONS -->
-    <title>Cart | Multitracks</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      href="https://mtracks.azureedge.net/public/images/icon/favicon/favicon-svg2.svg"
-    />
+		<meta
+			name="description"
+			content="Frontend assessment shopping cart project."
+		/>
+		<meta
+			name="title"
+			property="og:title"
+			content="Paul Munley Shopping Cart Project"
+		/>
+		<meta property="og:type" content="Website" />
+		<meta
+			name="image"
+			property="og:image"
+			content="https://live.staticflickr.com/65535/51407026585_3597b9eb72_k.jpg"
+		/>
+		<meta
+			name="description"
+			property="og:description"
+			content="Frontend assessment shopping cart project."
+		/>
+		<meta name="author" content="Paul Munley" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+		<!-- FONTS AND ICONS -->
+		<title>Cart | Multitracks</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+			rel="stylesheet"
+		/>
+		<link
+			rel="icon"
+			href="https://mtracks.azureedge.net/public/images/icon/favicon/favicon-svg2.svg"
+		/>
 
-    <!-- JS -->
-    <script defer src="src/js/views/headerView.js"></script>
-    <script defer src="src/js/views/cartView.js"></script>
-  </head>
-  <body>
-    <div id="fb-root"></div>
-    <script
-      async
-      defer
-      crossorigin="anonymous"
-      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"
-      nonce="YL84fdcM"
-    ></script>
-    <header class="header">
-      <img
-        src="http://mtracks.azureedge.net/public/images/site/logo/en/logo-mono.svg"
-        alt="Multitracks Logo"
-        class="header__logo"
-      />
-      <nav class="header__nav">
-        <ul class="header__list">
-          <li class="header__item">
-            <a href="#" class="header__link">Products</a>
-            <span class="header__icon-dark material-icons-outlined">
-              arrow_drop_down
-            </span>
-          </li>
-          <li class="header__item">
-            <a href="#" class="header__link">Songs</a>
-            <span class="header__icon-dark material-icons-outlined">
-              arrow_drop_down
-            </span>
-          </li>
-          <li class="header__item">
-            <a href="#" class="header__link">Sounds</a>
-            <span class="header__icon-dark material-icons-outlined">
-              arrow_drop_down
-            </span>
-          </li>
-          <li class="header__item">
-            <a href="#" class="header__link">Pricing</a>
-          </li>
-          <li class="header__item">
-            <a href="#" class="header__link">More</a>
-            <span class="header__icon-dark material-icons-outlined">
-              arrow_drop_down
-            </span>
-          </li>
-          <li class="header__item">
-            <a href="#" class="header__link header__link--covid">Covid-19</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__right">
-        <ul class="header__list">
-          <li class="header__item">
-            <span class="header__icon-light material-icons">
-              perm_identity
-            </span>
-            <a href="#" class="header__link">Account</a>
-          </li>
-          <li class="header__item">
-            <span class="header__icon-light material-icons-outlined"
-              >shopping_cart</span
-            >
-            <a href="#" class="header__link">Cart</a>
-          </li>
-          <li class="header__item">
-            <span class="header__icon-light material-icons-outlined">
-              headset_mic
-            </span>
-            <a href="#" class="header__link">Support</a>
-          </li>
-        </ul>
-        <div class="header__search-box">
-          <input type="text" placeholder="Search" class="header__search" />
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="container">
-        <section class="cart">
-          <div class="cart__content">
-            <h2 class="cart__heading heading-primary">My Cart</h2>
-            <ul class="cart__list">
-              <li class="cart__item">
-                <div class="cart__img-description">
-                  <img
-                    src="https://mtracks.azureedge.net/public/images/albums/100/3260.jpg"
-                    alt="Graves Into Gardens"
-                    class="cart__img"
-                  />
-                  <div class="cart__description">
-                    <p class="cart__songname">Graves Into Gardens</p>
-                    <p class="cart__artist">Elevation Worship</p>
-                  </div>
-                </div>
-                <div class="cart__media-type">
-                  <img
-                    src="/src/img/multitrack-wav.svg"
-                    alt="Multitrack WAV Audio Type Image"
-                    class="cart__icon-type"
-                  />
-                  <p class="cart__text-type">MultiTrack WAV</p>
-                </div>
-                <div class="cart__credit-cost">
-                  <p class="cart__credits">39 Credits</p>
-                </div>
-                <div class="cart__edit-item">
-                  <span class="cart__remove-item"> Remove </span>
-                  <span class="cart__verbar">&verbar;</span>
-                  <span class="cart__save-item"> Save for later </span>
-                </div>
-              </li>
-              <li class="cart__item">
-                <div class="cart__img-description">
-                  <img
-                    src="https://mtracks.azureedge.net/public/images/albums/100/2171.jpg"
-                    alt="Graves Into Gardens"
-                    class="cart__img"
-                  />
-                  <div class="cart__description">
-                    <p class="cart__songname">Goodness of God</p>
-                    <p class="cart__artist">Bethel Music</p>
-                  </div>
-                </div>
-                <div class="cart__media-type">
-                  <img
-                    src="/src/img/multitrack-chart.svg"
-                    alt="Multitrack WAV Audio Type Image"
-                    class="cart__icon-type"
-                  />
-                  <p class="cart__text-type">Chart</p>
-                </div>
-                <div class="cart__credit-cost">
-                  <p class="cart__credits">39 Credits</p>
-                </div>
-                <div class="cart__edit-item">
-                  <span class="cart__remove-item"> Remove </span>
-                  <span class="cart__verbar">&verbar;</span>
-                  <span class="cart__save-item"> Save for later </span>
-                </div>
-              </li>
-              <div class="cart__button">
-                <img
-                  src="src/img/left-arrow.svg"
-                  alt="Left arrow"
-                  class="cart__left-arrow"
-                />
-                <a href="#" class="btn btn--blue-no-bg">Continue Shopping</a>
-              </div>
-            </ul>
-          </div>
-        </section>
-        <section class="summary">
-          <div class="summary__content">
-            <h2 class="cart__heading heading-primary u-margin-bottom-large">
-              Order Summary
-            </h2>
-            <div class="summary__block summary__credits-promo-block">
-              <div class="summary__row summary__row-acct-credits">
-                <span class="summary__label">Credit in your account</span>
-                <span class="summary__number">234</span>
-              </div>
-              <div class="summary__row summary__row-credits-required">
-                <span class="summary__label">Credits required</span>
-                <span class="summary__number">41</span>
-              </div>
-              <div class="summary__row summary__row-promo">
-                <span class="summary__label">Promo Code</span>
-                <span class="summary__number"
-                  ><img src="src/img/down-arrow.svg" alt="Down arrow"
-                /></span>
-              </div>
-            </div>
-            <div class="summary__block summary__subtotal-tax-block">
-              <div class="summary__row summary__row-subtotal">
-                <span class="summary__label">Subtotal</span>
-                <span class="summary__number">41</span>
-              </div>
-              <div class="summary__row summary__row-tax">
-                <span class="summary__label">Tax</span>
-                <span class="summary__number">-</span>
-              </div>
-            </div>
-            <div class="summary__block summary__total-block">
-              <div class="summary__row summary__row-total">
-                <span class="summary__label">TOTAL</span>
-                <span class="summary__number">41</span>
-              </div>
-            </div>
-            <div class="summary__block summary__payment-block">
-              <span class="summary__label summary__label-payment-method"
-                >Payment Method</span
-              >
-              <div class="summary__block summary__block-payment-info">
-                <span class="summary__label">American Express</span>
-                <span class="summary__card-number">-1234</span>
-                <span class="summary__change-payment-method">
-                  <a href="#" class="btn btn--blue-no-bg change-payment-btn"
-                    >Change</a
-                  >
-                </span>
-              </div>
-              <div class="summary__row">
-                <p class="summary__all-sales-final">All sales are final.</p>
-              </div>
-              <div class="summary__place-order-and-agreement">
-                <a href="#" class="btn btn--blue-bg summary__place-order-btn"
-                  >PLACE ORDER</a
-                >
-                <p class="summary__agreement-text">
-                  By placing your order you agree to the Terms of Use and
-                  Privacy Policy.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="saved">
-          <div class="saved__content">
-            <h2 class="saved__heading">Saved for later</h2>
-            <ul class="saved__list">
-              <li class="saved__item">
-                <div class="saved__img-description">
-                  <img
-                    src="https://mtracks.azureedge.net/public/images/albums/260/261.jpg"
-                    alt="Forever"
-                    class="saved__img"
-                  />
-                  <div class="saved__description">
-                    <p class="saved__songname">Forever (Live Version)</p>
-                    <p class="saved__artist">Kari Jobe</p>
-                  </div>
-                </div>
-                <div class="saved__media-type">
-                  <img
-                    src="/src/img/multitrack-wav.svg"
-                    alt="Multitrack WAV Audio Type Image"
-                    class="saved__icon-type"
-                  />
-                  <p class="saved__text-type">MultiTrack WAV</p>
-                </div>
-                <div class="saved__edit-options-box">
-                  <a href="#" class="btn saved__remove-item-btn">Remove</a>
-                  <a href="#" class="btn btn--bg saved__add-to-cart-btn"
-                    >Add To Cart
-                  </a>
-                </div>
-              </li>
-              <li class="saved__item">
-                <div class="saved__img-description">
-                  <img
-                    src="https://mtracks.azureedge.net/public/images/albums/260/587.jpg"
-                    alt="In God We Trust"
-                    class="saved__img"
-                  />
-                  <div class="saved__description">
-                    <p class="saved__songname">In God We Trust</p>
-                    <p class="saved__artist">Hillsong Worship</p>
-                  </div>
-                </div>
-                <div class="saved__media-type">
-                  <img
-                    src="/src/img/multitrack-wav.svg"
-                    alt="Multitrack WAV Audio Type Image"
-                    class="saved__icon-type"
-                  />
-                  <p class="saved__text-type">MultiTrack WAV</p>
-                </div>
-                <div class="saved__edit-options-box">
-                  <a href="#" class="btn saved__remove-item-btn">Remove</a>
-                  <a href="#" class="btn btn--bg saved__add-to-cart-btn"
-                    >Add To Cart
-                  </a>
-                </div>
-              </li>
-              <li class="saved__item">
-                <div class="saved__img-description">
-                  <img
-                    src="https://mtracks.azureedge.net/public/images/albums/260/239.jpg"
-                    alt="This Is Amazing Grace
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/style.css" />
+
+		<!-- JS -->
+		<script defer src="src/js/views/headerView.js"></script>
+		<script defer src="src/js/views/cartView.js"></script>
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script
+			async
+			defer
+			crossorigin="anonymous"
+			src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"
+			nonce="YL84fdcM"
+		></script>
+		<header class="header">
+			<img
+				src="http://mtracks.azureedge.net/public/images/site/logo/en/logo-mono.svg"
+				alt="Multitracks Logo"
+				class="header__logo"
+			/>
+			<nav class="header__nav">
+				<ul class="header__list">
+					<li class="header__item">
+						<a href="#" class="header__link">Products</a>
+						<span class="header__icon-dark material-icons-outlined">
+							arrow_drop_down
+						</span>
+					</li>
+					<li class="header__item">
+						<a href="#" class="header__link">Songs</a>
+						<span class="header__icon-dark material-icons-outlined">
+							arrow_drop_down
+						</span>
+					</li>
+					<li class="header__item">
+						<a href="#" class="header__link">Sounds</a>
+						<span class="header__icon-dark material-icons-outlined">
+							arrow_drop_down
+						</span>
+					</li>
+					<li class="header__item">
+						<a href="#" class="header__link">Pricing</a>
+					</li>
+					<li class="header__item">
+						<a href="#" class="header__link">More</a>
+						<span class="header__icon-dark material-icons-outlined">
+							arrow_drop_down
+						</span>
+					</li>
+					<li class="header__item">
+						<a href="#" class="header__link header__link--covid">Covid-19</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header__right">
+				<ul class="header__list">
+					<li class="header__item">
+						<span class="header__icon-light material-icons">
+							perm_identity
+						</span>
+						<a href="#" class="header__link">Account</a>
+					</li>
+					<li class="header__item">
+						<span class="header__icon-light material-icons-outlined"
+							>shopping_cart</span
+						>
+						<a href="#" class="header__link">Cart</a>
+					</li>
+					<li class="header__item">
+						<span class="header__icon-light material-icons-outlined">
+							headset_mic
+						</span>
+						<a href="#" class="header__link">Support</a>
+					</li>
+				</ul>
+				<div class="header__search-box">
+					<input type="text" placeholder="Search" class="header__search" />
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="container">
+				<section class="cart">
+					<div class="cart__content">
+						<h2 class="cart__heading heading-primary">My Cart</h2>
+						<ul class="cart__list">
+							<li class="cart__item">
+								<div class="cart__img-description">
+									<img
+										src="https://mtracks.azureedge.net/public/images/albums/100/3260.jpg"
+										alt="Graves Into Gardens"
+										class="cart__img"
+									/>
+									<div class="cart__description">
+										<p class="cart__songname">Graves Into Gardens</p>
+										<p class="cart__artist">Elevation Worship</p>
+									</div>
+								</div>
+								<div class="cart__media-type">
+									<img
+										src="/src/img/multitrack-wav.svg"
+										alt="Multitrack WAV Audio Type Image"
+										class="cart__icon-type"
+									/>
+									<p class="cart__text-type">MultiTrack WAV</p>
+								</div>
+								<div class="cart__credit-cost">
+									<p class="cart__credits">39 Credits</p>
+								</div>
+								<div class="cart__edit-item">
+									<span class="cart__remove-item"> Remove </span>
+									<span class="cart__verbar">&verbar;</span>
+									<span class="cart__save-item"> Save for later </span>
+								</div>
+							</li>
+							<li class="cart__item">
+								<div class="cart__img-description">
+									<img
+										src="https://mtracks.azureedge.net/public/images/albums/100/2171.jpg"
+										alt="Graves Into Gardens"
+										class="cart__img"
+									/>
+									<div class="cart__description">
+										<p class="cart__songname">Goodness of God</p>
+										<p class="cart__artist">Bethel Music</p>
+									</div>
+								</div>
+								<div class="cart__media-type">
+									<img
+										src="/src/img/multitrack-chart.svg"
+										alt="Multitrack WAV Audio Type Image"
+										class="cart__icon-type"
+									/>
+									<p class="cart__text-type">Chart</p>
+								</div>
+								<div class="cart__credit-cost">
+									<p class="cart__credits">39 Credits</p>
+								</div>
+								<div class="cart__edit-item">
+									<span class="cart__remove-item"> Remove </span>
+									<span class="cart__verbar">&verbar;</span>
+									<span class="cart__save-item"> Save for later </span>
+								</div>
+							</li>
+							<div class="cart__button">
+								<img
+									src="src/img/left-arrow.svg"
+									alt="Left arrow"
+									class="cart__left-arrow"
+								/>
+								<a href="#" class="btn btn--blue-no-bg">Continue Shopping</a>
+							</div>
+						</ul>
+					</div>
+				</section>
+				<section class="summary">
+					<div class="summary__content">
+						<h2 class="cart__heading heading-primary u-margin-bottom-large">
+							Order Summary
+						</h2>
+						<div class="summary__block summary__credits-promo-block">
+							<div class="summary__row summary__row-acct-credits">
+								<span class="summary__label">Credit in your account</span>
+								<span class="summary__number">234</span>
+							</div>
+							<div class="summary__row summary__row-credits-required">
+								<span class="summary__label">Credits required</span>
+								<span class="summary__number">41</span>
+							</div>
+							<div class="summary__row summary__row-promo">
+								<span class="summary__label">Promo Code</span>
+								<span class="summary__number"
+									><img src="src/img/down-arrow.svg" alt="Down arrow"
+								/></span>
+							</div>
+						</div>
+						<div class="summary__block summary__subtotal-tax-block">
+							<div class="summary__row summary__row-subtotal">
+								<span class="summary__label">Subtotal</span>
+								<span class="summary__number">41</span>
+							</div>
+							<div class="summary__row summary__row-tax">
+								<span class="summary__label">Tax</span>
+								<span class="summary__number">-</span>
+							</div>
+						</div>
+						<div class="summary__block summary__total-block">
+							<div class="summary__row summary__row-total">
+								<span class="summary__label">TOTAL</span>
+								<span class="summary__number">41</span>
+							</div>
+						</div>
+						<div class="summary__block summary__payment-block">
+							<span class="summary__label summary__label-payment-method"
+								>Payment Method</span
+							>
+							<div class="summary__block summary__block-payment-info">
+								<span class="summary__label">American Express</span>
+								<span class="summary__card-number">-1234</span>
+								<span class="summary__change-payment-method">
+									<a href="#" class="btn btn--blue-no-bg change-payment-btn"
+										>Change</a
+									>
+								</span>
+							</div>
+							<div class="summary__row">
+								<p class="summary__all-sales-final">All sales are final.</p>
+							</div>
+							<div class="summary__place-order-and-agreement">
+								<a href="#" class="btn btn--blue-bg summary__place-order-btn"
+									>PLACE ORDER</a
+								>
+								<p class="summary__agreement-text">
+									By placing your order you agree to the Terms of Use and
+									Privacy Policy.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="saved">
+					<div class="saved__content">
+						<h2 class="saved__heading">Saved for later</h2>
+						<ul class="saved__list">
+							<li class="saved__item">
+								<div class="saved__img-description">
+									<img
+										src="https://mtracks.azureedge.net/public/images/albums/260/261.jpg"
+										alt="Forever"
+										class="saved__img"
+									/>
+									<div class="saved__description">
+										<p class="saved__songname">Forever (Live Version)</p>
+										<p class="saved__artist">Kari Jobe</p>
+									</div>
+								</div>
+								<div class="saved__media-type">
+									<img
+										src="/src/img/multitrack-wav.svg"
+										alt="Multitrack WAV Audio Type Image"
+										class="saved__icon-type"
+									/>
+									<p class="saved__text-type">MultiTrack WAV</p>
+								</div>
+								<div class="saved__edit-options-box">
+									<a href="#" class="btn saved__remove-item-btn">Remove</a>
+									<a href="#" class="btn btn--bg saved__add-to-cart-btn"
+										>Add To Cart
+									</a>
+								</div>
+							</li>
+							<li class="saved__item">
+								<div class="saved__img-description">
+									<img
+										src="https://mtracks.azureedge.net/public/images/albums/260/587.jpg"
+										alt="In God We Trust"
+										class="saved__img"
+									/>
+									<div class="saved__description">
+										<p class="saved__songname">In God We Trust</p>
+										<p class="saved__artist">Hillsong Worship</p>
+									</div>
+								</div>
+								<div class="saved__media-type">
+									<img
+										src="/src/img/multitrack-wav.svg"
+										alt="Multitrack WAV Audio Type Image"
+										class="saved__icon-type"
+									/>
+									<p class="saved__text-type">MultiTrack WAV</p>
+								</div>
+								<div class="saved__edit-options-box">
+									<a href="#" class="btn saved__remove-item-btn">Remove</a>
+									<a href="#" class="btn btn--bg saved__add-to-cart-btn"
+										>Add To Cart
+									</a>
+								</div>
+							</li>
+							<li class="saved__item">
+								<div class="saved__img-description">
+									<img
+										src="https://mtracks.azureedge.net/public/images/albums/260/239.jpg"
+										alt="This Is Amazing Grace
                     "
-                    class="saved__img"
-                  />
-                  <div class="saved__description">
-                    <p class="saved__songname">This Is Amazing Grace</p>
-                    <p class="saved__artist">This Is Amazing Grace</p>
-                  </div>
-                </div>
-                <div class="saved__media-type">
-                  <img
-                    src="/src/img/multitrack-wav.svg"
-                    alt="Multitrack WAV Audio Type Image"
-                    class="saved__icon-type"
-                  />
-                  <p class="saved__text-type">MultiTrack WAV</p>
-                </div>
-                <div class="saved__edit-options-box">
-                  <a href="#" class="btn saved__remove-item-btn">Remove</a>
-                  <a href="#" class="btn btn--bg saved__add-to-cart-btn"
-                    >Add To Cart
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
-    </main>
-    <div class="sticky-footer">
-      <div class="sticky-footer-content">
-        <div class="sticky-footer-total-credits">
-          <p>TOTAL</p>
-          <p>41 Credits</p>
-        </div>
-        <div class="sticky-footer-btn">
-          <a href="#" class="btn btn--blue-bg">PLACE ORDER</a>
-        </div>
-      </div>
-    </div>
-    <footer class="footer">
-      <div class="footer__primary">
-        <div class="footer__primary-content">
-          <div class="footer__col footer__col-products">
-            <ul class="footer__list footer__list-products">
-              <li class="footer__item footer__item-products">Products</li>
-              <li class="footer__item footer__item-products">
-                The Connected Stage
-              </li>
-              <li class="footer__item footer__item-products">Tracks</li>
-              <li class="footer__item footer__item-products">Playback</li>
-              <li class="footer__item footer__item-products">Pad Player</li>
-              <li class="footer__item footer__item-products">
-                Playback Rentals
-              </li>
-              <li class="footer__item footer__item-products">Cloud Pro</li>
-              <li class="footer__item footer__item-products">RehearsalMix</li>
-              <li class="footer__item footer__item-products">ChartBuilder</li>
-              <li class="footer__item footer__item-products">
-                Solo Practice Bundle
-              </li>
-              <li class="footer__item footer__item-products">Charts</li>
-              <li class="footer__item footer__item-products">ProPresenter</li>
-              <li class="footer__item footer__item-products">Sounds</li>
-              <li class="footer__item footer__item-products">Gratis License</li>
-            </ul>
-          </div>
-          <div class="footer__col footer__col-resources">
-            <ul class="footer__list footer__list-resources">
-              <li class="footer__item footer__item-resources">Resources</li>
-              <li class="footer__item footer__item-resources">Songs</li>
-              <li class="footer__item footer__item-resources">Sounds</li>
-            </ul>
-            <ul class="footer__list footer__list-company">
-              <li class="footer__item footer__item-company">About</li>
-              <li class="footer__item footer__item-company">Careers</li>
-              <li class="footer__item footer__item-company">Blog</li>
-              <li class="footer__item footer__item-company">PartnerContact</li>
-            </ul>
-          </div>
-          <div class="footer__col footer__col-store">
-            <ul class="footer__list footer__list-company">
-              <li class="footer__item footer__item-company">Store</li>
-              <li class="footer__item footer__item-company">Buy Credits</li>
-              <li class="footer__item footer__item-company">Free Content</li>
-              <li class="footer__item footer__item-company">Request a Song</li>
-            </ul>
-            <ul class="footer__list footer__list-extras">
-              <li class="footer__item footer__item-extras">Extras</li>
-              <li class="footer__item footer__item-extras">Sessions</li>
-              <li class="footer__item footer__item-extras">Testimonials</li>
-              <li class="footer__item footer__item-extras">
-                Submit your content
-              </li>
-            </ul>
-          </div>
-          <div class="footer__col footer__col-account">
-            <ul class="footer__list footer__list-account">
-              <li class="footer__item footer__item-account">Account</li>
-              <li class="footer__item footer__item-account">View cart</li>
-              <li class="footer__item footer__item-account">Organization</li>
-              <li class="footer__item footer__item-account">My Profile</li>
-              <li class="footer__item footer__item-account">Library</li>
-              <li class="footer__item footer__item-account">Setlists</li>
-              <li class="footer__item footer__item-account">RehearsalMix</li>
-              <li class="footer__item footer__item-account">Custom Session</li>
-            </ul>
-          </div>
-          <div class="footer__col-large">
-            <div class="footer__newsletter">
-              <p class="footer__item footer__item-subscribe-text">
-                Subscribe to our Newsletter
-              </p>
-              <input
-                type="text"
-                class="footer__item footer__item-subscribe-input"
-                placeholder="Email Address"
-              />
-              <a
-                href="#"
-                class="btn btn--blue-bg-square footer__item-subscribe-btn"
-                >Subscribe</a
-              >
-            </div>
-            <div class="footer__support">
-              <p class="footer__item footer__item-support-text">
-                Have a Problem?
-              </p>
-              <a href="#" class="footer__link footer__link-support"
-                ><span>View FAQs or Contact our Support Team</span
-                ><span><img src="src/img/right-arrow.svg" /></span
-              ></a>
-            </div>
-            <div class="footer__socials">
-              <ul class="footer__list footer__list-social-cir-icon-list">
-                <li class="footer__item footer__item-social-cir-icon">
-                  <a
-                    href="#"
-                    class="footer__item footer__item-social-cir-icon-link"
-                    ><img src="src/img/facebook.svg" alt="Facbook Link"
-                  /></a>
-                </li>
-                <li class="footer__item footer__item-social-cir-icon">
-                  <a
-                    href="#"
-                    class="footer__item footer__item-social-cir-icon-link"
-                    ><img src="src/img/twitter.svg" alt="Twitter Link"
-                  /></a>
-                </li>
-                <li class="footer__item footer__item-social-cir-icon">
-                  <a
-                    href="#"
-                    class="footer__item footer__item-social-cir-icon-link"
-                    ><img src="src/img/instagram.svg" alt="Instagram Link"
-                  /></a>
-                </li>
-                <li class="footer__item footer__item-social-cir-icon">
-                  <a
-                    href="#"
-                    class="footer__item footer__item-social-cir-icon-link"
-                    ><img src="src/img/youtube.svg" alt="Youtube Link"
-                  /></a>
-                </li>
-              </ul>
-              <div class="footer__socials--square">
-                <div
-                  class="fb-like"
-                  data-href="https://www.multitracks.com/"
-                  data-width=""
-                  data-layout="button_count"
-                  data-action="like"
-                  data-size="small"
-                  data-share="false"
-                ></div>
-                <a
-                  href="https://twitter.com/MultiTracks_?ref_src=twsrc%5Etfw"
-                  class="twitter-follow-button"
-                  data-show-screen-name="false"
-                  data-show-count="false"
-                  >Follow @MultiTracks_</a
-                >
-                <script
-                  async
-                  src="https://platform.twitter.com/widgets.js"
-                  charset="utf-8"
-                ></script>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer__secondary">
-        <div class="footer__secondary-content">
-          <div class="footer__copyright footer__copyright-secondary">
-            <p>&copy;2006-2021 by Multitracks.com LLC. All Rights Reserved</p>
-          </div>
-          <ul class="footer__list footer__list-secondary">
-            <li class="footer__item footer__item-secondary">
-              <a href="#" class="footer__link footer__link-secondary">Terms</a>
-            </li>
-            <li class="footer__item footer__item-secondary">
-              <a href="#" class="footer__link footer__link-secondary"
-                >Privacy Policy</a
-              >
-            </li>
-            <li class="footer__item footer__item-secondary">
-              <a href="#" class="footer__link footer__link-secondary"
-                >Contact</a
-              >
-            </li>
-          </ul>
-          <div class="footer__lang-selection">
-            <span
-              class="
-                material-icons-outlined
-                footer__lang-selection footer__lang-selection-globe
-              "
-            >
-              language
-            </span>
-            <span class="footer__lang-selection footer__lang-selection-text"
-              ><p>English</p></span
-            >
-            <span
-              class="
-                material-icons
-                footer__lang-selection footer__lang-selection-text
-              "
-            >
-              arrow_drop_down
-            </span>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
+										class="saved__img"
+									/>
+									<div class="saved__description">
+										<p class="saved__songname">This Is Amazing Grace</p>
+										<p class="saved__artist">This Is Amazing Grace</p>
+									</div>
+								</div>
+								<div class="saved__media-type">
+									<img
+										src="/src/img/multitrack-wav.svg"
+										alt="Multitrack WAV Audio Type Image"
+										class="saved__icon-type"
+									/>
+									<p class="saved__text-type">MultiTrack WAV</p>
+								</div>
+								<div class="saved__edit-options-box">
+									<a href="#" class="btn saved__remove-item-btn">Remove</a>
+									<a href="#" class="btn btn--bg saved__add-to-cart-btn"
+										>Add To Cart
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+		</main>
+		<div class="sticky-footer">
+			<div class="sticky-footer-content">
+				<div class="sticky-footer-total-credits">
+					<p>TOTAL</p>
+					<p>41 Credits</p>
+				</div>
+				<div class="sticky-footer-btn">
+					<a href="#" class="btn btn--blue-bg">PLACE ORDER</a>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="footer__primary">
+				<div class="footer__primary-content">
+					<div class="footer__col footer__col-products">
+						<ul class="footer__list footer__list-products">
+							<li class="footer__item footer__item-products">Products</li>
+							<li class="footer__item footer__item-products">
+								The Connected Stage
+							</li>
+							<li class="footer__item footer__item-products">Tracks</li>
+							<li class="footer__item footer__item-products">Playback</li>
+							<li class="footer__item footer__item-products">Pad Player</li>
+							<li class="footer__item footer__item-products">
+								Playback Rentals
+							</li>
+							<li class="footer__item footer__item-products">Cloud Pro</li>
+							<li class="footer__item footer__item-products">RehearsalMix</li>
+							<li class="footer__item footer__item-products">ChartBuilder</li>
+							<li class="footer__item footer__item-products">
+								Solo Practice Bundle
+							</li>
+							<li class="footer__item footer__item-products">Charts</li>
+							<li class="footer__item footer__item-products">ProPresenter</li>
+							<li class="footer__item footer__item-products">Sounds</li>
+							<li class="footer__item footer__item-products">Gratis License</li>
+						</ul>
+					</div>
+					<div class="footer__col footer__col-resources">
+						<ul class="footer__list footer__list-resources">
+							<li class="footer__item footer__item-resources">Resources</li>
+							<li class="footer__item footer__item-resources">Songs</li>
+							<li class="footer__item footer__item-resources">Sounds</li>
+						</ul>
+						<ul class="footer__list footer__list-company">
+							<li class="footer__item footer__item-company">About</li>
+							<li class="footer__item footer__item-company">Careers</li>
+							<li class="footer__item footer__item-company">Blog</li>
+							<li class="footer__item footer__item-company">PartnerContact</li>
+						</ul>
+					</div>
+					<div class="footer__col footer__col-store">
+						<ul class="footer__list footer__list-company">
+							<li class="footer__item footer__item-company">Store</li>
+							<li class="footer__item footer__item-company">Buy Credits</li>
+							<li class="footer__item footer__item-company">Free Content</li>
+							<li class="footer__item footer__item-company">Request a Song</li>
+						</ul>
+						<ul class="footer__list footer__list-extras">
+							<li class="footer__item footer__item-extras">Extras</li>
+							<li class="footer__item footer__item-extras">Sessions</li>
+							<li class="footer__item footer__item-extras">Testimonials</li>
+							<li class="footer__item footer__item-extras">
+								Submit your content
+							</li>
+						</ul>
+					</div>
+					<div class="footer__col footer__col-account">
+						<ul class="footer__list footer__list-account">
+							<li class="footer__item footer__item-account">Account</li>
+							<li class="footer__item footer__item-account">View cart</li>
+							<li class="footer__item footer__item-account">Organization</li>
+							<li class="footer__item footer__item-account">My Profile</li>
+							<li class="footer__item footer__item-account">Library</li>
+							<li class="footer__item footer__item-account">Setlists</li>
+							<li class="footer__item footer__item-account">RehearsalMix</li>
+							<li class="footer__item footer__item-account">Custom Session</li>
+						</ul>
+					</div>
+					<div class="footer__col-large">
+						<div class="footer__newsletter">
+							<p class="footer__item footer__item-subscribe-text">
+								Subscribe to our Newsletter
+							</p>
+							<input
+								type="text"
+								class="footer__item footer__item-subscribe-input"
+								placeholder="Email Address"
+							/>
+							<a
+								href="#"
+								class="btn btn--blue-bg-square footer__item-subscribe-btn"
+								>Subscribe</a
+							>
+						</div>
+						<div class="footer__support">
+							<p class="footer__item footer__item-support-text">
+								Have a Problem?
+							</p>
+							<a href="#" class="footer__link footer__link-support"
+								><span>View FAQs or Contact our Support Team</span
+								><span><img src="src/img/right-arrow.svg" /></span
+							></a>
+						</div>
+						<div class="footer__socials">
+							<ul class="footer__list footer__list-social-cir-icon-list">
+								<li class="footer__item footer__item-social-cir-icon">
+									<a
+										href="#"
+										class="footer__item footer__item-social-cir-icon-link"
+										><img src="src/img/facebook.svg" alt="Facbook Link"
+									/></a>
+								</li>
+								<li class="footer__item footer__item-social-cir-icon">
+									<a
+										href="#"
+										class="footer__item footer__item-social-cir-icon-link"
+										><img src="src/img/twitter.svg" alt="Twitter Link"
+									/></a>
+								</li>
+								<li class="footer__item footer__item-social-cir-icon">
+									<a
+										href="#"
+										class="footer__item footer__item-social-cir-icon-link"
+										><img src="src/img/instagram.svg" alt="Instagram Link"
+									/></a>
+								</li>
+								<li class="footer__item footer__item-social-cir-icon">
+									<a
+										href="#"
+										class="footer__item footer__item-social-cir-icon-link"
+										><img src="src/img/youtube.svg" alt="Youtube Link"
+									/></a>
+								</li>
+							</ul>
+							<div class="footer__socials--square">
+								<div
+									class="fb-like"
+									data-href="https://www.multitracks.com/"
+									data-width=""
+									data-layout="button_count"
+									data-action="like"
+									data-size="small"
+									data-share="false"
+								></div>
+								<a
+									href="https://twitter.com/MultiTracks_?ref_src=twsrc%5Etfw"
+									class="twitter-follow-button"
+									data-show-screen-name="false"
+									data-show-count="false"
+									>Follow @MultiTracks_</a
+								>
+								<script
+									async
+									src="https://platform.twitter.com/widgets.js"
+									charset="utf-8"
+								></script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__secondary">
+				<div class="footer__secondary-content">
+					<div class="footer__copyright footer__copyright-secondary">
+						<p>&copy;2006-2021 by Multitracks.com LLC. All Rights Reserved</p>
+					</div>
+					<ul class="footer__list footer__list-secondary">
+						<li class="footer__item footer__item-secondary">
+							<a href="#" class="footer__link footer__link-secondary">Terms</a>
+						</li>
+						<li class="footer__item footer__item-secondary">
+							<a href="#" class="footer__link footer__link-secondary"
+								>Privacy Policy</a
+							>
+						</li>
+						<li class="footer__item footer__item-secondary">
+							<a href="#" class="footer__link footer__link-secondary"
+								>Contact</a
+							>
+						</li>
+					</ul>
+					<div class="footer__lang-selection">
+						<span
+							class="
+								material-icons-outlined
+								footer__lang-selection footer__lang-selection-globe
+							"
+						>
+							language
+						</span>
+						<span class="footer__lang-selection footer__lang-selection-text"
+							><p>English</p></span
+						>
+						<span
+							class="
+								material-icons
+								footer__lang-selection footer__lang-selection-text
+							"
+						>
+							arrow_drop_down
+						</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
