@@ -10,6 +10,10 @@ html {
 	font-size: 62.5%;
 	height: 100%;
 
+	@include respond(large-deskop) {
+		height: auto;
+	}
+
 	@include respond(tab-land) {
 		font-size: 56.25%; // Base font 9px
 	}
@@ -21,7 +25,11 @@ html {
 
 body {
 	box-sizing: border-box;
-	height: 100%;
+	// height: 100%;
+
+	@include respond(large-deskop) {
+		height: 100%;
+	}
 
 	@include respond(tab-port) {
 		padding-bottom: 8rem;

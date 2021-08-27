@@ -9,6 +9,9 @@
 html {
   font-size: 62.5%;
   height: 100%; }
+  @media only screen and (min-width: 1988px) {
+    html {
+      height: auto; } }
   @media only screen and (max-width: 1200px) {
     html {
       font-size: 56.25%; } }
@@ -17,8 +20,10 @@ html {
       font-size: 50%; } }
 
 body {
-  box-sizing: border-box;
-  height: 100%; }
+  box-sizing: border-box; }
+  @media only screen and (min-width: 1988px) {
+    body {
+      height: 100%; } }
   @media only screen and (max-width: 900px) {
     body {
       padding-bottom: 8rem; } }
@@ -92,12 +97,15 @@ body {
   font-weight: 700; }
   @media only screen and (min-width: 1988px) {
     .cart {
-      margin-top: 8%; } }
+      margin-top: 3%; } }
   .cart__content {
     position: relative;
     background-color: white;
     margin: 8rem 3rem 8rem 4.5rem;
     height: 100%; }
+    @media only screen and (min-width: 1988px) {
+      .cart__content {
+        margin: 0; } }
     @media only screen and (max-width: 1200px) {
       .cart__content {
         margin-top: 5.4rem;
